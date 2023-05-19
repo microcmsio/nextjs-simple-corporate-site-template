@@ -21,7 +21,7 @@
 }
 
 .thumbnail {
-  width: 800px;
+  width: 100%;
   height: auto;
   margin-bottom: 64px;
 }
@@ -159,14 +159,12 @@
   .title {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    text-align: center;
   }
 
   .description {
     font-size: 0.9rem;
     color: var(--color-text-sub);
     margin: 24px 0 40px;
-    text-align: center;
   }
 
   .meta {
