@@ -3,10 +3,9 @@ import { getNewsList } from '@/libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/constants';
 import NewsList from '@/components/NewsList';
 import styles from './page.module.css';
-import Link from 'next/link';
 import ButtonLink from '@/components/ButtonLink';
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async function Page() {
   const data = await getNewsList({

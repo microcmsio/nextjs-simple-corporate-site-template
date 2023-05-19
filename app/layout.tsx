@@ -22,8 +22,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const revalidate = 0;
-
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
