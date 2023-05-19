@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getNewsDetail } from '@/libs/microcms';
 import Article from '@/components/Article';
 import styles from './page.module.css';
+import ButtonLink from '@/components/ButtonLink';
 
 type Props = {
   params: {
@@ -39,9 +40,7 @@ export default async function Page({ params, searchParams }: Props) {
     <>
       <Article data={data} />
       <div className={styles.footer}>
-        <Link href="/news" className={styles.button}>
-          ニュース一覧
-        </Link>
+        <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
       </div>
     </>
   );

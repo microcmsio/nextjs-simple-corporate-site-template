@@ -1,7 +1,7 @@
 .items {
   display: flex;
   color: #fff;
-  gap: 24px;
+  gap: 40px;
 }
 
 .button {
@@ -27,6 +27,7 @@
 
   .items {
     flex-direction: column;
+    gap: 24px;
   }
 
   .button {

@@ -4,6 +4,7 @@ import { TOP_NEWS_LIMIT } from '@/constants';
 import NewsList from '@/components/NewsList';
 import styles from './page.module.css';
 import Link from 'next/link';
+import ButtonLink from '@/components/ButtonLink';
 
 export const revalidate = 0;
 
@@ -25,9 +26,9 @@ export default async function Page() {
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
         <NewsList articles={data.contents} />
-        <Link href="/news" className={`${styles.button} ${styles.newsLink}`}>
-          もっとみる
-        </Link>
+        <div className={styles.newsLink}>
+          <ButtonLink href="/news">もっとみる</ButtonLink>
+        </div>
       </section>
       <section className={styles.section}>
         <div className={styles.horizontal}>
@@ -39,9 +40,7 @@ export default async function Page() {
               <br />
               AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
             </p>
-            <a href="" className={styles.button}>
-              サービスページへ
-            </a>
+            <ButtonLink href="">サービスページへ</ButtonLink>
           </div>
           <Image
             className={styles.businessImg}
@@ -106,9 +105,7 @@ export default async function Page() {
               <br />
               新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
             </p>
-            <a href="" className={styles.button}>
-              採用情報
-            </a>
+            <ButtonLink href="">採用情報へ</ButtonLink>
           </div>
           <Image
             className={styles.hiringImg}
