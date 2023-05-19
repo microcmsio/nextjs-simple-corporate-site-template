@@ -1,3 +1,4 @@
+import Menu from '@/components/Menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import './globals.css';
@@ -28,7 +29,7 @@ export default async function RootLayout({ children }: Props) {
     <html lang="ja">
       <body className={styles.body}>
         <header className={styles.header}>
-          <Link href="/">
+          <Link href="/" className={styles.logoLink}>
             <Image
               src="/logo.svg"
               alt="SIMPLE"
@@ -38,19 +39,7 @@ export default async function RootLayout({ children }: Props) {
               priority
             />
           </Link>
-          <nav>
-            <ul className={styles.nav}>
-              <li>
-                <Link href="/news">ニュース</Link>
-              </li>
-              <li>
-                <Link href="/recruit">採用情報</Link>
-              </li>
-              <li>
-                <Link href="/contact">お問い合わせ</Link>
-              </li>
-            </ul>
-          </nav>
+          <Menu />
         </header>
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>

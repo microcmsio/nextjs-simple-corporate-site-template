@@ -21,6 +21,10 @@
   gap: 40px;
 }
 
+.logoLink {
+  display: flex;
+}
+
 .logo {
   height: 24px;
   width: auto;
@@ -33,5 +37,19 @@
   font-size: 0.8rem;
 }
 
+.button {
+  display: none;
+}
+
 @media (max-width: 640px) {
+  .header {
+    padding: 24px 16px 8px;
+  }
+
+  .button {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
