@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 import styles from './layout.module.css';
 
 export const metadata = {
@@ -12,13 +12,7 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <>
-      <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>Contact</h1>
-          <p className={styles.titleJa}>お問い合わせ</p>
-        </div>
-        <Image className={styles.bgimg} src="/img-main.jpg" alt="" width={4000} height={1200} />
-      </section>
+      <Hero title="Contact" sub="お問い合わせ" />
       <div className={styles.container}>{children}</div>
     </>
   );
