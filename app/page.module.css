@@ -1,0 +1,242 @@
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  overflow: hidden;
+  padding: 200px 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+  text-align: center;
+}
+
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 600px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.news {
+  position: relative;
+  background-color: #fff;
+  width: 840px;
+  margin: -40px auto 0;
+  padding: 24px 40px;
+  border-radius: 8px;
+}
+
+.newsTitle {
+  font-size: 1.5rem;
+}
+
+.newsLink {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+}
+
+.section {
+  width: 960px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.sectionTitleEn {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.sectionTitleJa {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.sectionTitleJa::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 40px;
+  background-color: var(--color-text-main);
+}
+
+.sectionDescription {
+  margin-bottom: 40px;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.businessImg {
+  width: 400px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.button {
+  display: block;
+  padding: 20px 40px;
+  border-radius: var(--border-radius);
+  width: 300px;
+  background: url('/arrow-right.svg') no-repeat right 20px center, var(--color-button-primary);
+  color: var(--color-text-unpainted);
+}
+
+.aboutus {
+  background-color: #fff;
+}
+
+.aboutusImg {
+  width: 100%;
+  height: auto;
+  margin-left: -60%;
+  border-radius: var(--border-radius);
+}
+
+.info {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 0;
+}
+
+.infoTitle {
+  width: 100px;
+  font-weight: bold;
+}
+
+.infoDescription {
+  flex: 1;
+}
+
+.hiringImg {
+  width: 480px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 640px) {
+  .top {
+    padding: 120px 16px;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 600px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+  }
+
+  .news {
+    position: relative;
+    background-color: #fff;
+    width: calc(100% - 32px);
+    margin: -40px auto 0;
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+  }
+
+  .newsLink {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
+  }
+
+  .section {
+    width: 100%;
+    margin: auto;
+    padding: 80px 16px;
+  }
+
+  .sectionTitleEn {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  .sectionTitleJa {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .sectionTitleJa::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40px;
+    background-color: var(--color-text-main);
+  }
+
+  .sectionDescription {
+    margin-bottom: 40px;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .businessImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutusImg {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .hiringImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .button {
+    display: block;
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    background: url('/arrow-right.svg') no-repeat right 20px center, var(--color-button-primary);
+    color: var(--color-text-unpainted);
+  }
+}

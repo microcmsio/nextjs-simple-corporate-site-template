@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  padding: 20px 40px;
+  border-radius: var(--border-radius);
+  width: 300px;
+  background: url('/arrow-right-circle.svg') no-repeat right 20px center, #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color-bg-sub);
+  margin: 80px -80px -80px;
+  padding: 40px 80px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
