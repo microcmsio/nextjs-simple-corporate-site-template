@@ -20,7 +20,7 @@ export default async function Page() {
             私たちは市場をリードしているグローバルテックカンパニーです。
           </p>
         </div>
-        <Image className={styles.bgimg} src="/img-main.jpg" alt="" width={4000} height={1200} />
+        <Image className={styles.bgimg} src="/img-mv.jpg" alt="" width={3600} height={1200} />
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>

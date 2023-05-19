@@ -23,7 +23,7 @@
 .bgimg {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: auto;
   height: 600px;
   object-fit: cover;
@@ -153,7 +153,7 @@
   .bgimg {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: auto;
     height: 600px;
     object-fit: cover;
