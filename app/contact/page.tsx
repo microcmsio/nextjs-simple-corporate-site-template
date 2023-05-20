@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 import ContactForm from '@/components/ContactForm';
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className={styles.container}>
       <p className={styles.text}>

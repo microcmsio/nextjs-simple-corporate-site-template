@@ -3,14 +3,19 @@
   background-color: #fff;
   width: 840px;
   margin: -40px auto 0;
-  padding: 40px 80px;
-  border-radius: var(--border-radius);
+  padding: 80px;
+  border-radius: 8px;
+}
+
+@media (max-width: 840px) {
+  .container {
+    width: calc(100% - 80px);
+  }
 }
 
 @media (max-width: 640px) {
   .container {
     width: calc(100% - 32px);
-    margin: -40px auto 0;
     padding: 40px 16px;
   }
 }
