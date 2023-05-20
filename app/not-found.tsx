@@ -1,12 +1,20 @@
+import Hero from '@/components/Hero';
 import styles from './not-found.module.css';
 
 export default function NotFound() {
   return (
-    <div className={styles.container}>
-      <dl>
-        <dt className={styles.title}>404</dt>
-        <dd className={styles.text}>ページが見つかりませんでした</dd>
-      </dl>
-    </div>
+    <>
+      <Hero title="404" sub="Not Found" />
+      <div className={styles.container}>
+        <dl>
+          <dt className={styles.title}>ページが見つかりませんでした</dt>
+          <dd className={styles.text}>
+            あなたがアクセスしようとしたページは存在しません。
+            <br />
+            URLを再度ご確認ください。
+          </dd>
+        </dl>
+      </div>
+    </>
   );
 }
