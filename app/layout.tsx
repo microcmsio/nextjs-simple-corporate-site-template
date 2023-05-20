@@ -1,6 +1,5 @@
-import Menu from '@/components/Menu';
-import Image from 'next/image';
-import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -26,23 +25,9 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <body className={styles.body}>
-        <header className={styles.header}>
-          <Link href="/" className={styles.logoLink}>
-            <Image
-              src="/logo.svg"
-              alt="SIMPLE"
-              className={styles.logo}
-              width={348}
-              height={133}
-              priority
-            />
-          </Link>
-          <Menu />
-        </header>
-        <main className={styles.main}>{children}</main>
-        <footer className={styles.footer}>
-          <p className={styles.cr}>© SIMPLE. All Rights Reserved 2023</p>
-        </footer>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

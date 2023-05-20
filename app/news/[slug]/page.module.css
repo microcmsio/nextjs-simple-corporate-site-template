@@ -9,8 +9,7 @@
 .footer {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--color-bg-sub);
-  margin: 80px -80px -80px;
-  padding: 40px 80px;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-top: 1px solid var(--color-border);
+  margin-top: 80px;
+  padding-top: 40px;
 }

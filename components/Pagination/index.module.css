@@ -14,8 +14,9 @@
   align-items: center;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: var(--border-radius);
 }
 .current {
-  border: 1px solid var(--color-border-dark);
+  color: var(--color-text-unpainted);
+  background-color: var(--color-button-primary);
 }

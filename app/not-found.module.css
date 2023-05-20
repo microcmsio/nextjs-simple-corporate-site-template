@@ -21,6 +21,13 @@
 }
 
 @media (max-width: 640px) {
+  .title {
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
+  }
   .container {
     width: calc(100% - 32px);
     margin: -40px auto 0;
