@@ -22,6 +22,14 @@ export type News = {
   category: Category;
 };
 
+// メンバーの型定義
+export type Member = {
+  name: string;
+  position: string;
+  profile: string;
+  image?: MicroCMSImage;
+};
+
 export type Article = News & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -85,4 +93,15 @@ export const getCategoryDetail = async (contentId: string, queries?: MicroCMSQue
     .catch(notFound);
 
   return detailData;
+};
+
+// メンバー一覧を取得
+export const getMembersList = async (queries?: MicroCMSQueries) => {
+  const listData = await client
+    .getList<Member>({
+      endpoint: 'members',
+      queries,
+    })
+    .catch(notFound);
+  return listData;
 };
