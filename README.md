@@ -1,4 +1,5 @@
-microCMS 公式のシンプルなブログテンプレートです。
+microCMS 公式のシンプルなコーポレートサイトのテンプレートです。
+サイト内のお問い合わせ送信先として CRM である HubSpot を利用しています。
 
 ## 環境変数の設定
 
@@ -8,6 +9,8 @@ microCMS 公式のシンプルなブログテンプレートです。
 MICROCMS_API_KEY=xxxxxxxxxx
 MICROCMS_SERVICE_DOMAIN=xxxxxxxxxx
 BASE_URL=xxxxxxxxxx
+HUBSPOT_PORTAL_ID=xxxxxxxx
+HUBSPOT_FORM_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
 `MICROCMS_API_KEY`  
@@ -19,6 +22,12 @@ microCMS 管理画面の URL（https://xxxxxxxx.microcms.io）の xxxxxxxx の�
 `BASE_URL`
 デプロイ先の URL です。プロトコルから記載してください。
 （https://hoge.vercel.app/ など）
+
+`HUBSPOT_PORTAL_ID`
+HubSpot のアカウント ID
+
+`HUBSPOT_FORM_ID`
+HubSpot のフォームに割り当てられる ID
 
 ## 開発の仕方
 
