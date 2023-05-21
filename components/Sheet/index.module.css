@@ -7,7 +7,7 @@
   border-radius: 8px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 920px) {
   .container {
     width: calc(100% - 80px);
   }
