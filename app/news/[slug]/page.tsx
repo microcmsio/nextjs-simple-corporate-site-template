@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { getNewsDetail } from '@/libs/microcms';
 import Article from '@/components/Article';
 import styles from './page.module.css';
