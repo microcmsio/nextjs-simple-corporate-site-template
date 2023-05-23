@@ -1,5 +1,6 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { redirect } from 'next/navigation';
 import styles from './index.module.css';
 
 export default function ContactForm() {
@@ -8,6 +9,8 @@ export default function ContactForm() {
   const companyRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+  const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<string>();
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await fetch('/api/submit-contact', {
@@ -16,36 +19,28 @@ export default function ContactForm() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        fields: [
-          {
-            objectTypeId: '0-1',
-            name: 'lastname',
-            value: lastnameRef.current?.value,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'firstname',
-            value: firstnameRef.current?.value,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'company',
-            value: companyRef.current?.value,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'email',
-            value: emailRef.current?.value,
-          },
-          {
-            objectTypeId: '0-1',
-            name: 'message',
-            value: messageRef.current?.value,
-          },
-        ],
+        lastname: lastnameRef.current?.value,
+        firstname: firstnameRef.current?.value,
+        company: companyRef.current?.value,
+        email: emailRef.current?.value,
+        message: messageRef.current?.value,
       }),
-    });
+    }).then((res) => res.json());
+    if (res.status === 'error') {
+      setError(res.message);
+    } else {
+      setSuccess(true);
+    }
   };
+  if (success) {
+    return (
+      <p className={styles.success}>
+        お問い合わせいただき、ありがとうございます。
+        <br />
+        お返事まで今しばらくお待ちください。
+      </p>
+    );
+  }
   return (
     <form className={styles.form} onSubmit={onSubmit}>
       <div className={styles.horizontal}>
@@ -81,6 +76,7 @@ export default function ContactForm() {
         <textarea className={styles.textarea} id="message" ref={messageRef} />
       </div>
       <div className={styles.actions}>
+        <p className={styles.error}>{error}</p>
         <input type="submit" value="送信する" className={styles.button} />
       </div>
     </form>

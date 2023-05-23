@@ -52,3 +52,22 @@
   color: var(--color-text-unpainted);
   cursor: pointer;
 }
+
+.success {
+  background-color: var(--color-bg-sub);
+  text-align: center;
+  padding: 40px;
+  border-radius: var(--border-radius);
+}
+
+.error {
+  color: var(--color-text-error);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 640px) {
+  .success {
+    text-align: left;
+  }
+}
