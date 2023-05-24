@@ -29,8 +29,9 @@ microCMS 管理画面の URL（https://xxxxxxxx.microcms.io）の xxxxxxxx の�
 
 `BASE_URL`
 デプロイ先の URL です。プロトコルから記載してください。
-例）
-開発環境 → http://localhost:3000
+
+例）  
+開発環境 → http://localhost:3000  
 本番環境 → https://xxxxxxxx.vercel.app/ など
 
 `HUBSPOT_PORTAL_ID`
