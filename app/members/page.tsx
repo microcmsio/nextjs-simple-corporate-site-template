@@ -9,7 +9,7 @@ export default async function Page() {
   const data = await getMembersList();
   return (
     <div className={styles.container}>
-      {data.contents.length > 0 ? (
+      {data.contents.length === 0 ? (
         <p className={styles.empty}>メンバーが登録されていません。</p>
       ) : (
         <ul>
