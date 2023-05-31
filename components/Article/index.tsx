@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { formatRichText } from '@/libs/utils';
 import { type Article } from '@/libs/microcms';
 import PublishedDate from '../Date';
@@ -17,24 +18,15 @@ export default function Article({ data }: Props) {
         <Category category={data.category} />
         <PublishedDate date={data.publishedAt || data.createdAt} />
       </div>
-      <picture>
-        <source
-          type="image/webp"
-          media="(max-width: 640px)"
-          srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-        />
-        <source
-          type="image/webp"
-          srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=800&h=420 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=800&h=420dpr=2 2x`}
-        />
-        <img
+      {data.thumbnail && (
+        <Image
           src={data.thumbnail?.url}
           alt=""
           className={styles.thumbnail}
           width={data.thumbnail?.width}
           height={data.thumbnail?.height}
         />
-      </picture>
+      )}
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{

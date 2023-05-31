@@ -14,24 +14,13 @@ export default function NewsListItem({ news }: Props) {
     <li className={styles.list}>
       <Link href={`/news/${news.id}`} className={styles.link}>
         {news.thumbnail ? (
-          <picture>
-            <source
-              type="image/webp"
-              media="(max-width: 640px)"
-              srcSet={`${news.thumbnail?.url}?fm=webp&w=414 1x, ${news.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-            />
-            <source
-              type="image/webp"
-              srcSet={`${news.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126 1x, ${news.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126&dpr=2 2x`}
-            />
-            <img
-              src={news.thumbnail?.url || `/noimage.png`}
-              alt=""
-              className={styles.image}
-              width={news.thumbnail?.width}
-              height={news.thumbnail?.height}
-            />
-          </picture>
+          <Image
+            src={news.thumbnail?.url}
+            alt=""
+            className={styles.image}
+            width={news.thumbnail?.width}
+            height={news.thumbnail?.height}
+          />
         ) : (
           <Image
             className={styles.image}
