@@ -3,10 +3,18 @@ import { getMembersList } from '@/libs/microcms';
 import styles from './page.module.css';
 import ButtonLink from '@/components/ButtonLink';
 
+type Props = {
+  searchParams: {
+    dk: string;
+  };
+};
+
 export const revalidate = 60;
 
-export default async function Page() {
-  const data = await getMembersList();
+export default async function Page({ searchParams }: Props) {
+  const data = await getMembersList({
+    draftKey: searchParams.dk,
+  });
   return (
     <div className={styles.container}>
       {data.contents.length === 0 ? (
