@@ -38,6 +38,16 @@ export type Business = {
   link: string;
 };
 
+// メタ情報の型定義
+export type Meta = {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: MicroCMSImage;
+  canonical?: string;
+};
+
 export type Article = News & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -123,4 +133,16 @@ export const getBusinessList = async (queries?: MicroCMSQueries) => {
     })
     .catch(notFound);
   return listData;
+};
+
+// メタ情報を取得
+export const getMeta = async (queries?: MicroCMSQueries) => {
+  const data = await client
+    .getObject<Meta>({
+      endpoint: 'meta',
+      queries,
+    })
+    .catch(() => null);
+
+  return data;
 };

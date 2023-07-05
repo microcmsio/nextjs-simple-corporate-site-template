@@ -1,21 +1,32 @@
+import { Metadata } from 'next';
+import { getMeta } from '@/libs/microcms';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 
-export const metadata = {
-  metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: 'シンプルなコーポレートサイト',
-  description: 'microCMS公式が提供するシンプルなコーポレートサイトのテンプレートです。',
-  openGraph: {
-    title: 'シンプルなコーポレートサイト',
-    description: 'microCMS公式が提供するシンプルなコーポレートサイトのテンプレートです。',
-    images: '/ogp.png',
-  },
-  alternates: {
-    canonical: '/',
-  },
-};
+export const revalidate = 60;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const data = await getMeta();
+  if (!data) {
+    return {};
+  }
+
+  return {
+    metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: data.ogTitle,
+      description: data.ogDescription,
+      images: [data.ogImage?.url || ''],
+    },
+    alternates: {
+      canonical: data.canonical,
+    },
+  };
+}
 
 type Props = {
   children: React.ReactNode;
