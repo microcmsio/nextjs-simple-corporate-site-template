@@ -39,7 +39,7 @@ export default async function Page() {
               <br />
               AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
             </p>
-            <ButtonLink href="">サービスページへ</ButtonLink>
+            <ButtonLink href="/business">もっとみる</ButtonLink>
           </div>
           <Image
             className={styles.businessImg}
