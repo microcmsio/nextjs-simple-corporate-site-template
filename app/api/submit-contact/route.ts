@@ -82,6 +82,10 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        context: {
+          hutk: request.cookies.get('hubspotutk')?.value,
+          pageUri: request.headers.get('referer'),
+        },
         fields: [
           {
             objectTypeId: '0-1',
