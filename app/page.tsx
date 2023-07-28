@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { getNewsList } from '@/libs/microcms';
-import { TOP_NEWS_LIMIT } from '@/constants';
-import NewsList from '@/components/NewsList';
+import { getNewsList } from '@/app/_libs/microcms';
+import { TOP_NEWS_LIMIT } from '@/app/_constants';
+import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
-import ButtonLink from '@/components/ButtonLink';
+import ButtonLink from '@/app/_components/ButtonLink';
 
 export const revalidate = 60;
 

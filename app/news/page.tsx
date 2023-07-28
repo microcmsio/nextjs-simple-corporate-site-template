@@ -1,7 +1,7 @@
-import { getNewsList } from '@/libs/microcms';
-import { NEWS_LIST_LIMIT } from '@/constants';
-import NewsList from '@/components/NewsList';
-import Pagination from '@/components/Pagination';
+import { getNewsList } from '@/app/_libs/microcms';
+import { NEWS_LIST_LIMIT } from '@/app/_constants';
+import NewsList from '@/app/_components/NewsList';
+import Pagination from '@/app/_components/Pagination';
 
 export const revalidate = 60;
 

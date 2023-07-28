@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import { getNewsDetail } from '@/libs/microcms';
-import Article from '@/components/Article';
+import { getNewsDetail } from '@/app/_libs/microcms';
+import Article from '@/app/_components/Article';
 import styles from './page.module.css';
-import ButtonLink from '@/components/ButtonLink';
+import ButtonLink from '@/app/_components/ButtonLink';
 
 type Props = {
   params: {

@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero';
+import Hero from '@/app/_components/Hero';
 import styles from './not-found.module.css';
 
 export default function NotFound() {
