@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { getBusinessList } from '@/libs/microcms';
+import { getBusinessList } from '@/app/_libs/microcms';
 import styles from './page.module.css';
-import ButtonLink from '@/components/ButtonLink';
+import ButtonLink from '@/app/_components/ButtonLink';
 
 type Props = {
   searchParams: {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './index.module.css';
-import { NEWS_LIST_LIMIT } from '@/constants';
+import { NEWS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
   totalCount: number;

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
-import { getMeta } from '@/libs/microcms';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import { getMeta } from '@/app/_libs/microcms';
+import Footer from '@/app/_components/Footer';
+import Header from '@/app/_components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 
