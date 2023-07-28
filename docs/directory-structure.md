@@ -21,17 +21,19 @@ app
 └── page.tsx
 ```
 
-business, contact, members, news というディクレトリがあるので、ブラウザから`/business`、`/contact`などとアクセスすると該当ディレクトリ配下の情報が表示されます。
+`business`, `contact`, `members`, `news` というディクレトリがあるので、ブラウザから`/business`、`/contact`などとアクセスすると該当ディレクトリ配下の情報が表示されます。
+`api`というディクレトリだけ特殊なので、ここではスルーしてください。
 
-api というディクレトリだけ特殊なので、ここではスルーしてください。
+![route-segments-to-path-segments](https://github.com/microcmsio/nextjs-simple-corporate-site-template/assets/4659294/ee376d80-e52a-42ca-aa2b-516fde675f72)
+引用： https://nextjs.org/docs/app/building-your-application/routing
 
-また、\_components, \_constants, \_libs といったアンダースコア（\_）から始まるディレクトリはルーティングから無視されます
+また、`_components`, `_constants`, `_libs` といったアンダースコア`_`から始まるディレクトリはルーティングから無視されます
 
-### ファイル名のルール
+## ファイル名のルール
 
 App Router では特定のファイル名のルールが定まっています。重要なものをいくつか紹介します。
 
-#### `page.tsx`
+### page.tsx
 
 このファイルに記載した情報が実際に Web ページとして表示されます。
 
@@ -39,12 +41,12 @@ business や contact ディレクトリ配下にも`page.tsx`が置かれてお�
 
 ブラウザから`/`にアクセスすると`app/page.tsx`の情報が表示され、`/business`にアクセスすると`app/business/page.tsx`の情報が表示されます。
 
-#### `layout.tsx`
+### layout.tsx
 
 UI のレイアウトを指定できるファイルです。
 `layout.tsx`内の`children`として`page.tsx`が読み込まれるようなイメージです。
 
-#### `not-found.tsx`
+### not-found.tsx
 
 ページが見つからなかった場合にこのファイルに記載された情報が出力されます。
 404 ページとして利用すると良いでしょう。
@@ -58,15 +60,15 @@ https://nextjs.org/docs/app/building-your-application/routing#file-conventions
 
 ものすごく簡潔に説明すると、CSS を JavaScript から読み込んで class 名を指定するイメージです。
 
-具体例を見ていきますと、`app/page.tsx`と同階層に`app/page.module.css`があるかと思います。
+具体例として、`app/page.tsx`と同階層に`app/page.module.css`があります。
 
 `xxxxx.module.css`というファイル名にすることで CSS Modules と認識される仕組みになっています。
 
 今回の場合、`page.tsx`用の CSS だということが分かりやすいように`page.module.css`としています。中身は普通の CSS が記載されています。
 
-次に`app/page.tsx`の中を見てみましょう。諸々と割愛しますが、次のような記載があります。
+次に`page.tsx`の中を見てみると、次のような記載があります。（いくつか省略あり）
 
-```
+```typescript
 import styles from './page.module.css';
 
 export default async function Page() {
@@ -85,4 +87,4 @@ section タグの`className`に`styles.top`を渡していますね。
 
 本リポジトリ内では CSS ファイルはすべて読み込み元のファイルの同階層に配置するようにしています。
 
-`page.tsx`には`page.module.css`、`layout.tsx`には`layout.module.css`、`not-found.tsx`には`not-found.module.css`を対応させています。
+`page.tsx`には`page.module.css`、`layout.tsx`には`layout.module.css`、`not-found.tsx`には`not-found.module.css`が対応しています。
