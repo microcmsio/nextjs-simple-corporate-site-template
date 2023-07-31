@@ -4,4 +4,5 @@
 
 リポジトリを紐付け、環境変数を `Environment Variables` に登録後、デプロイしてみましょう。
 
-![](public/img-vercel-settings.png)
+<img width="744" alt="img-vercel-settings" src="https://github.com/microcmsio/nextjs-simple-corporate-site-template/assets/4659294/e08997f4-433f-43f7-9ab5-2aa07ef7f771">
+
