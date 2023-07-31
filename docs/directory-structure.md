@@ -88,3 +88,37 @@ section タグの`className`に`styles.top`を渡していますね。
 本リポジトリ内では CSS ファイルはすべて読み込み元のファイルの同階層に配置するようにしています。
 
 `page.tsx`には`page.module.css`、`layout.tsx`には`layout.module.css`、`not-found.tsx`には`not-found.module.css`が対応しています。
+
+### カスタムプロパティ（変数）の使用
+頻繁に利用する色などの設定は`app/globals.css`にて変数定義をしています。
+```css
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+    'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
+    'Courier New', monospace;
+  --color-text-main: #333;
+  --color-text-sub: #999;
+  --color-text-unpainted: #fff;
+  --color-text-error: #f33;
+  --color-bg-main: #fff;
+  --color-bg-sub: #f3f3f3;
+  --color-bg-code: #fafafa;
+  --color-bg-painted: #333;
+  --color-border-dark: #333;
+  --color-border: #ddd;
+  --color-border-light: #f3f3f3;
+  --color-current: #eee;
+  --color-button-primary: #333;
+  --border-radius: 4px;
+}
+```
+
+ここで定義した変数は、他のCSSファイルから次のように読み取ることができます。
+```css
+border-bottom: 1px solid var(--color-border);
+```
+
+また、`globals.css`自体は`app/layout.tsx`にてインポートしています。
+```typescript
+import './globals.css';
+```
