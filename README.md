@@ -59,8 +59,8 @@ npm run dev
 
 ## 解説ドキュメント
 
-- [コンテンツ管理](docs/content-management.md)
-- [画面プレビューの設定](docs/content-preview.md)
-- [ディレクトリ構成](docs/directory-structure.md)
-- [HubSpot の準備](docs/hubspot-setting.md)
-- [Vercel へのデプロイ](docs/vercel-deploy.md)
+- [コンテンツ管理](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/content-management.md)
+- [画面プレビューの設定](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/content-preview.md)
+- [ディレクトリ構成](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/directory-structure.md)
+- [HubSpot の準備](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/hubspot-setting.md)
+- [Vercel へのデプロイ](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/vercel-deploy.md)
