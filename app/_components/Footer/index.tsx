@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p className={styles.cr}>© SIMPLE. All Rights Reserved 2023</p>
+      <p>© SIMPLE. All Rights Reserved 2023</p>
     </footer>
   );
 }
