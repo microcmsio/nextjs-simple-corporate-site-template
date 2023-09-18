@@ -1,6 +1,5 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { redirect } from 'next/navigation';
 import styles from './index.module.css';
 
 export default function ContactForm() {
