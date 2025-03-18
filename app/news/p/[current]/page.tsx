@@ -4,14 +4,13 @@ import Pagination from '@/app/_components/Pagination';
 import ArticleList from '@/app/_components/NewsList';
 
 type Props = {
-  params: {
+  params: Promise<{
     current: string;
-  };
+  }>;
 };
 
-export const revalidate = 60;
-
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const current = parseInt(params.current as string, 10);
   const data = await getNewsList({
     limit: NEWS_LIST_LIMIT,

@@ -3,6 +3,12 @@ import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
   title: '事業内容｜シンプルなコーポレートサイト',
+  openGraph: {
+    title: '事業内容｜シンプルなコーポレートサイト',
+  },
+  alternates: {
+    canonical: '/business',
+  },
 };
 
 type Props = {

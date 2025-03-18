@@ -5,8 +5,6 @@ import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
-export const revalidate = 60;
-
 export default async function Page() {
   const data = await getNewsList({
     limit: TOP_NEWS_LIMIT,
