@@ -6,8 +6,6 @@ import Header from '@/app/_components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 
-export const revalidate = 60;
-
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta();
   if (!data) {
