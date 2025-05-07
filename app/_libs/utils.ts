@@ -8,7 +8,7 @@ export const formatDate = (date: string) => {
 };
 
 export const formatRichText = (richText: string) => {
-  const $ = load(richText);
+  const $ = load(richText, null, false);
   $('pre code').each((_, elm) => {
     const lang = $(elm).attr('class');
     const res = lang
