@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
 import { getMeta } from '@/app/_libs/microcms';
 import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
@@ -34,13 +33,6 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
-      <Script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src={`//js.hs-scripts.com/${process.env.HUBSPOT_PORTAL_ID}.js`}
-      ></Script>
       <body className={styles.body}>
         <Header />
         <main>{children}</main>
