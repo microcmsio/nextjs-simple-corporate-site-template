@@ -7,7 +7,7 @@ microCMS 公式のシンプルなコーポレートサイトのテンプレー�
 
 ## 動作環境
 
-Node.js 22 以上
+Node.js 24 以上
 
 ## 環境変数の設定
 
@@ -64,3 +64,14 @@ npm run dev
 - [ディレクトリ構成](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/directory-structure.md)
 - [HubSpot の準備](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/hubspot-setting.md)
 - [Vercel へのデプロイ](https://github.com/microcmsio/nextjs-simple-corporate-site-template/blob/main/docs/vercel-deploy.md)
+
+## Node.js のバージョンについて
+
+このテンプレートは **Node.js 24 以上**を前提としています。
+
+Node.js では定期的にセキュリティアップデートが提供されています。  
+安全にご利用いただくため、Node.js を利用する際は
+**利用中のメジャーバージョン（例: 24.x）の最新パッチバージョンを使用することを推奨します。**
+
+最新のセキュリティ情報については、以下をご参照ください。
+https://nodejs.org/ja/blog/vulnerability/
