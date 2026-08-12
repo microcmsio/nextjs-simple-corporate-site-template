@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'"
   },
   "prettier": {
@@ -21,21 +21,21 @@
     "node": ">=24.x"
   },
   "dependencies": {
-    "@types/node": "^24.1.0",
-    "@types/react": "^19.0.11",
-    "@types/react-dom": "^19.0.4",
-    "cheerio": "^1.0.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "cheerio": "^1.2.0",
     "classnames": "^2.5.1",
     "date-fns-tz": "^3.2.0",
-    "eslint": "^9.22.0",
-    "eslint-config-next": "^15.5.18",
-    "eslint-config-prettier": "^10.1.1",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.0",
+    "eslint-config-prettier": "^10.1.8",
     "highlight.js": "^11.11.1",
     "microcms-js-sdk": "^3.4.0",
-    "next": "^15.5.18",
-    "prettier": "^3.5.3",
-    "react": "^19.0.4",
-    "react-dom": "^19.0.4",
-    "typescript": "^5.8.2"
+    "next": "^16.3.0",
+    "prettier": "^3.9.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^6.0.3"
   }
 }
