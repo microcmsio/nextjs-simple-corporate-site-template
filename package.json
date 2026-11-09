@@ -18,7 +18,7 @@
     "printWidth": 100
   },
   "engines": {
-    "node": ">=24.x"
+    "node": "26.x"
   },
   "dependencies": {
     "@types/node": "^24.13.3",
@@ -37,5 +37,8 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
   }
 }
